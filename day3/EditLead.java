@@ -25,7 +25,7 @@ public class EditLead {
 		driver.findElement(By.xpath("//a[contains(text(),'Create Lead')]/following::a")).click();
 		driver.findElement(By.xpath("(//label[contains(text(),'First name:')]/following::input[@name='firstName'])[3]")).sendKeys(texttofind);
 		driver.findElement(By.xpath("//button[contains(text(),'Find Leads')]")).click();
-		Thread.sleep(3000);
+		Thread.sleep(3000);//this sleep is required for the list to load
 		 	driver.findElement(By.xpath("//div[contains(@class,'x-grid3-col-firstName')]/a")).click();
 		   	String viewleadtitle = driver.getTitle();
 			System.out.println("The title of the page appeared after clicking a lead to view is-"+viewleadtitle);
